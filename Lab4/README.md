@@ -52,7 +52,7 @@ The following tasks were accomplished related to FPGA programming:
 1. [UCF_file](lab4count4.ucf):
 This UCF file provides necessary constraints to the FPGA design software about the physical implementation of the design. It ensures that the FPGA programming software correctly maps the design onto the physical chip.
 
-2. [VHDL_code](lab4test.vhd):
+2. [VHDL_code](/Lab4/lab4desk07ff23.vhd):
 This VHDL code is the primary source file for the 4-bit synchronous binary counter. It describes a complex digital circuit that performs a series of logical operations (AND and XOR) based on the 'EN' input and maintains state using FDCE flip-flops.
 
 2. [Testbench](lab4test.vhd)
