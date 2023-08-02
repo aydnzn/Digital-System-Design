@@ -1,0 +1,12 @@
+net nreset loc = B8 ;
+net board_clk loc = V10 ;
+net vsync loc = p7 ;
+net hsync loc = n6  ;
+net red<0> loc = u7  ;
+net red<1> loc = V7 ;
+net red<2> loc = n7 ;
+net green<0> loc = p8 ; 
+net green<1> loc = t6  ;
+net green<2> loc = V6 ;
+net blue<0> loc = r7 ;
+net blue<1> loc = t7 ;
