@@ -26,10 +26,10 @@ In the game, a string of LEDs lights up sequentially with one LED being a differ
 
 The UCF provides the physical mapping and interface standards for an FPGA design. It is the blueprint linking logical signals to specific pins on the FPGA according to the project's needs. Main aspects covered in this UCF file include:
 
-    - Allocation of specific pins for clock, reset, button inputs, and various display-related signals (i.e., vertical and horizontal sync, RGB signals).
-    - Detailed mapping of pins for the 8-bit 'q' output and the color components of an RGB signal.
-    - Override of the default dedicated clock routing for 'button1'.
-    - Pin assignments and I/O standards specification for the seven-segment display's cathodes (SSEG_CA) and anodes (SSEG_AN).
+- Allocation of specific pins for clock, reset, button inputs, and various display-related signals (i.e., vertical and horizontal sync, RGB signals).
+- Detailed mapping of pins for the 8-bit 'q' output and the color components of an RGB signal.
+- Override of the default dedicated clock routing for 'button1'.
+- Pin assignments and I/O standards specification for the seven-segment display's cathodes (SSEG_CA) and anodes (SSEG_AN).
 
 This file employs LVCMOS33 as the I/O standard and provides a hardware configuration necessary for the synthesis, place, and route stages in the FPGA design process.
 
@@ -37,11 +37,11 @@ This file employs LVCMOS33 as the I/O standard and provides a hardware configura
 
 This VHDL script constitutes the core of a timer-based LED game. The script segments can be related to the game's functionality as follows:
 
-    - LED Timer Game: The routine responsible for the game flow controls the LEDs and validates the player's response time. The variable 'qout' orchestrates the LED sequence. Success in the game depends on the player's ability to respond in time to the lit sequence. Each timely response advances the game to a new level with a unique LED sequence.
-    - Lives and Scoring: The player starts with three lives, represented by 'can'. With each mistimed response, 'can' decreases. The player's score, represented by 'temp', increases with each timely button press, while 'hhhs' holds the highest score attained in the game.
-    - Difficulty and Extra Lives: The game speed increases with each level, challenging the player more. Every tenth level awards an extra life to the player.
-    - Seven-Segment Display: The player's score and the highest score are exhibited on a seven-segment display, driven by 'temp' and 'hhhs'.
-    - Game Over: The game concludes when the player runs out of lives. A high score prompts a "high score" display, otherwise, the player sees a "lose" message.
+- LED Timer Game: The routine responsible for the game flow controls the LEDs and validates the player's response time. The variable 'qout' orchestrates the LED sequence. Success in the game depends on the player's ability to respond in time to the lit sequence. Each timely response advances the game to a new level with a unique LED sequence.
+- Lives and Scoring: The player starts with three lives, represented by 'can'. With each mistimed response, 'can' decreases. The player's score, represented by 'temp', increases with each timely button press, while 'hhhs' holds the highest score attained in the game.
+- Difficulty and Extra Lives: The game speed increases with each level, challenging the player more. Every tenth level awards an extra life to the player.
+- Seven-Segment Display: The player's score and the highest score are exhibited on a seven-segment display, driven by 'temp' and 'hhhs'.
+- Game Over: The game concludes when the player runs out of lives. A high score prompts a "high score" display, otherwise, the player sees a "lose" message.
 
 This code intricately assembles a time-critical game, challenging players to beat their highest score by responding accurately to the LED sequence.
 
