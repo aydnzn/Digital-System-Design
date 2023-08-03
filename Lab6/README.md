@@ -32,11 +32,11 @@ This VHDL script implements a D Flip-Flop, a fundamental building block in digit
 3. [main](/Lab6/frequency_divider.vhd):
 This VHDL script implements a frequency divider and a 4-bit binary-coded decimal (BCD) counter with the capability to count up, count down, and parallel load. The counter is designed to interact with a 7-segment display for output.
 
-    The script includes three main components:
+The script includes three main components:
 
-        - A frequency divider that reduces an input frequency to 100 Hz.
-        - A debouncing process that prevents false triggering of the count due to switch bounce. This is implemented through a series of [D Flip-Flops (DFF)](/Lab6/dff.vhd) and [4-input AND gates](/Lab6/and4.vhd).
-        - The core BCD counter with up-count, down-count, and parallel load functionality.
+- A frequency divider that reduces an input frequency to 100 Hz.
+- A debouncing process that prevents false triggering of the count due to switch bounce. This is implemented through a series of [D Flip-Flops (DFF)](/Lab6/dff.vhd) and [4-input AND gates](/Lab6/and4.vhd).
+- The core BCD counter with up-count, down-count, and parallel load functionality.
 
 The BCD counter values are converted to 7-segment display format, then routed to the display output. The display is refreshed at a rate of 100 Hz to ensure visibility.
 
